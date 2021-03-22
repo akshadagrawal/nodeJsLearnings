@@ -1,5 +1,6 @@
 const http= require('http');
 const fs = require('fs');
+const _ = require('lodash');
 
 const server= http.createServer((req,res)=>{
     
@@ -53,6 +54,19 @@ const server= http.createServer((req,res)=>{
         }
     })
 
+
+    //========lodash=========
+
+    const num =_.random(0,20);
+    console.log(num);
+
+    const greet = _.once(()=>{
+        console.log('hello');
+    });
+
+    greet();
+    greet(); //only once would be run
+    
 });
 
 
